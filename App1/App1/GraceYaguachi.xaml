@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.GraceYaguachi">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Nombre:" />
+            <Entry x:Name="nombreEntry" />
+            <Label Text="Empresa:" />
+            <Entry x:Name="empresaEntry" />
+            <Label Text="Teléfono:" />
+            <Entry x:Name="telefonoEntry" Keyboard="Numeric" />
+            <Button Text="Guardar" Clicked="Guardar_Clicked" />
+
+            <Entry x:Name="busquedaEntry" Placeholder="Buscar por nombre o teléfono" TextChanged="BusquedaEntry_TextChanged" />
+
+            <ListView x:Name="listaNombres" ItemSelected="ListaNombres_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nombre}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- Botón 1 -->
+            <Button Text="lista" Clicked="Btn_lista_Clicked"/>
+
+            <!-- Botón 2 -->
+            <Button Text="agregar" Clicked="agregar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

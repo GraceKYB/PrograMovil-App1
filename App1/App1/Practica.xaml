@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Practica">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ingrese su nombre"/>
+            <Entry x:Name="nombreEntry" Placeholder="Nombre"/>
+
+            <Label Text="Ingrese su Telefono"/>
+            <Entry x:Name="telefonoEntry" Placeholder="Numero" Keyboard="Telephone"/>
+
+            <Label Text="Ingrese su direccion"/>
+            <Entry x:Name="direccionEntry" Placeholder="direccion"/>
+
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardarDatos_Clicked"/>
+
+            <Button x:Name="btnMostrarDatos" Text="Mostrar"  Clicked="btnMostrar_Datos_Clicked" />
+
+            <Label x:Name="lblDatosUsuarios" FontSize="18"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Controles">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <TimePicker x:Name="hora" />
+            <CheckBox x:Name="check" IsChecked="True" />
+            <DatePicker x:Name="fecha"/>
+            <Editor x:Name="edit" />
+            <Picker x:Name="picker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Elemento 1</x:String>
+                        <x:String>Elemento 2</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Guardar" Clicked="GuardarControles_clicked"/>
+
+            <Label x:Name="lblResultado"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

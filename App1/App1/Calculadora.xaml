@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Calculadora">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <!-- Campo de texto para mostrar números y resultados -->
+            <Entry x:Name="displayEntry" Text="0" HorizontalTextAlignment="End" FontSize="30" Margin="0,0,0,10"/>
+
+            <!-- Fila para botones de números -->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="7" Clicked="NumberButton_Clicked"/>
+                <Button Text="8" Clicked="NumberButton_Clicked"/>
+                <Button Text="9" Clicked="NumberButton_Clicked"/>
+                <Button Text="/" Clicked="OperationButton_Clicked"/>
+            </StackLayout>
+
+            <!-- Fila para botones de números -->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="4" Clicked="NumberButton_Clicked"/>
+                <Button Text="5" Clicked="NumberButton_Clicked"/>
+                <Button Text="6" Clicked="NumberButton_Clicked"/>
+                <Button Text="*" Clicked="OperationButton_Clicked"/>
+            </StackLayout>
+
+            <!-- Fila para botones de números -->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="1" Clicked="NumberButton_Clicked"/>
+                <Button Text="2" Clicked="NumberButton_Clicked"/>
+                <Button Text="3" Clicked="NumberButton_Clicked"/>
+                <Button Text="-" Clicked="OperationButton_Clicked"/>
+            </StackLayout>
+
+            <!-- Fila para botones de números -->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="0" Clicked="NumberButton_Clicked"/>
+                <Button Text="C" Clicked="ClearButton_Clicked"/>
+                <Button Text="=" Clicked="EqualsButton_Clicked"/>
+                <Button Text="+" Clicked="OperationButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

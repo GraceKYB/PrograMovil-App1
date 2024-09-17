@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Deber">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Ingrese sus dos nombre"/>
+                <Entry x:Name="nombreEntry" Placeholder="Nombre"/>
+
+                <Label Text="Ingrese sus dos apellidos"/>
+                <Entry x:Name="apellidoEntry" Placeholder="Apellido"/>
+
+                <Label Text="Ingrese su Telefono"/>
+                <Entry x:Name="telefonoEntry" Placeholder="Numero" Keyboard="Telephone"/>
+
+                <Label Text="Ingrese su correo electronico"/>
+                <Entry x:Name="correoEntry" Placeholder="Correo" Keyboard="Email"/>
+
+                <Label Text="Ingrese la hora:"/>
+                <TimePicker x:Name="horaTimePick" />
+
+                <Label Text="Ingrese Fecha nacimiento"/>
+                <DatePicker x:Name="fechaNacDP"/>
+
+                <Label Text="Tipo de documento"/>
+                <Picker Title="Selecciona tipo de documento" x:Name="tipoDocumentoPicker" SelectedIndexChanged="tipoDocumentoPicker_SelectIndCha">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Cédula</x:String>
+                            <x:String>Ruc</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry x:Name="ciEntry" Placeholder="CI" Keyboard="Numeric" IsVisible="false"/>
+                <Entry x:Name="rucEntry" Placeholder="RUC" Keyboard="Numeric" IsVisible="false"/>
+
+                <Label Text="Ingrese genero"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <CheckBox x:Name="chkMasculino" />
+                    <Label Text="Masculino" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <CheckBox x:Name="chkFemenino" />
+                    <Label Text="Femenino" />
+                </StackLayout>
+
+                <Label Text="Ingrese su reseña"/>
+                <Editor x:Name="reseniaEditor" Placeholder="Escribe aqui.." HeightRequest="100"/>
+
+                <Button x:Name="btnGuarda" Text="Guardar"  Clicked="btnGuarda_Clicked"/>
+
+
+                <Button x:Name="btnMostrarDatos" Text="Mostrar"  Clicked="btnMostrar_Clicked"/>
+
+                
+                <Label x:Name="lbl_1" Text="Nombre"/>
+                <Label x:Name="lbl_2" Text="Apellido"/>
+                <Label x:Name="lbl_3" Text="Telefono" />
+                <Label x:Name="lbl_4" Text="Correo Electronico" />
+                <Label x:Name="lbl_5" Text="Hora" />
+                <Label x:Name="lbl_6" Text="Fecha de nacimiento"/>
+                <Label x:Name="lbl_7" Text="Edad" />
+                <Label x:Name="lbl_8" Text="Tipo de documento"/>
+                <Label x:Name="lbl_9" Text="Tipo genero"/>
+                <Label x:Name="lbl_10" Text="Reseña"/>
+
+            </StackLayout>
+        </ScrollView>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

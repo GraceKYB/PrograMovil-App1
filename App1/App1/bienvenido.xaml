@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.bienvenido">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="HeightRequest" Value="75"/>
+                <Setter Property="WidthRequest" Value="75"/>
+                <Setter Property="BackgroundColor" Value="DarkGray"/>
+                <Setter Property="BorderRadius" Value="30"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="15" Padding="10">
+        <!-- Entry para mostrar la operación -->
+        <Entry x:Name="operationDisplay" 
+               FontSize="Medium" 
+               HorizontalOptions="FillAndExpand" 
+               TextColor="Black" 
+               IsReadOnly="True"
+               HorizontalTextAlignment="End"/>
+
+        <!-- Entry para mostrar el resultado -->
+        <Entry x:Name="resultDisplay" 
+               FontSize="Large" 
+               HorizontalOptions="FillAndExpand" 
+               TextColor="Maroon"
+               IsReadOnly="True"
+               HorizontalTextAlignment="End"/>
+
+        <!-- Botones de la calculadora -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Definir botones -->
+            <Button Text="C" Grid.Row="0" Grid.Column="0"  Clicked="OnClear"/>
+            <Button Text="/" Grid.Row="0" Grid.Column="1"  Clicked="OnSelectOperator"/>
+            <Button Text="*" Grid.Row="0" Grid.Column="2"  Clicked="OnSelectOperator"/>
+            <Button Text="-" Grid.Row="0" Grid.Column="3"  Clicked="OnSelectOperator"/>
+
+            <Button Text="7" Grid.Row="1" Grid.Column="0"  Clicked="OnSelectNumber"/>
+            <Button Text="8" Grid.Row="1" Grid.Column="1"  Clicked="OnSelectNumber"/>
+            <Button Text="9" Grid.Row="1" Grid.Column="2"  Clicked="OnSelectNumber"/>
+            <Button Text="+" Grid.Row="1" Grid.Column="3"  Clicked="OnSelectOperator"/>
+
+            <Button Text="4" Grid.Row="2" Grid.Column="0"  Clicked="OnSelectNumber"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1"  Clicked="OnSelectNumber"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2"  Clicked="OnSelectNumber"/>
+            <Button Text="=" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2"  Clicked="OnCalculate"/>
+
+            <Button Text="1" Grid.Row="3" Grid.Column="0"  Clicked="OnSelectNumber"/>
+            <Button Text="2" Grid.Row="3" Grid.Column="1"  Clicked="OnSelectNumber"/>
+            <Button Text="3" Grid.Row="3" Grid.Column="2"  Clicked="OnSelectNumber"/>
+            <Button Text="0" Grid.Row="3" Grid.Column="3"  Clicked="OnSelectNumber"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
